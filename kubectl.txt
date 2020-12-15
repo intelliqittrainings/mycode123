@@ -1,0 +1,33 @@
+To create a deployment
+kubect create deployment deployment_name --image=image_name
+
+This will create a deployment in which we have a replica set and in the replica set we have a pod
+kubectl get deployment
+kubectl get replicaset
+kubectl get pods
+
+To edit the deployment
+kubectl edit deployment deployment_name
+This will opne the file where we can make the changes and it will perform a rolling update
+
+
+Debugging
+=================
+kubectl logs pod_name
+kubectl describe pods pod_name
+
+kubectl exec -it pod_name -- bin/bash
+
+Delete
+==============
+To delete deployment
+kubectl delete deployment deployment_name
+
+To update
+===========
+kubectl apply -f file_name
+This will do the update operation and creation also
+
+
+
+
